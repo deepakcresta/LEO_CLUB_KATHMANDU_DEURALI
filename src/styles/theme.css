@@ -1,0 +1,39 @@
+/* 
+  Theme Variables for Leo Club of Kathmandu Deurali
+  To re-theme the site, simply change the hex/rgba values here.
+  Or, you can add a `[data-theme="alt"]` block to override these variables dynamically.
+*/
+:root {
+  --paper: #F6F0E2;               /* cream ground, matches the poster */
+  --ink: #0B1B3F;                 /* deep navy, the default dark ground */
+  --accent: #C9A24B;              /* gold, the only accent */
+  --on-accent: #0B1B3F;
+  --surface: #12285A;             /* lighter navy tint */
+  --muted: rgba(246,240,226,0.62);/* secondary text on dark */
+  --muted-on-paper: rgba(11,27,63,0.62); /* secondary text on cream */
+  --line: rgba(246,240,226,0.16); /* hairlines on dark */
+  --line-on-paper: rgba(11,27,63,0.16);
+  --radius: 8px;
+  --panel-radius: 24px;
+}
+
+/* Sections that sit on --paper use this class to swap muted and line variables */
+.on-paper {
+  --muted: var(--muted-on-paper);
+  --line: var(--line-on-paper);
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-ink: var(--ink);
+  --color-accent: var(--accent);
+  --color-on-accent: var(--on-accent);
+  --color-surface: var(--surface);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --radius-base: var(--radius);
+  --radius-panel: var(--panel-radius);
+  --font-display: "Gloock", serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+}
